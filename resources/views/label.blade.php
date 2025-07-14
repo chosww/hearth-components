@@ -1,3 +1,3 @@
 <label {{ $attributes->merge([]) }}>
-    {{ $value ?? $slot }}{{ $required ? "*" : ""}}
+    {{ $value ?? $slot }}{{ isset($required) && $required ? "*" : ""}}
 </label>
