@@ -1,5 +1,5 @@
 <div class="field @error($generateErrorId($name, locale())) field--error @enderror">
-    <x-hearth-label :for="$generateFieldId($name, locale())" :value="$generateLabelString($label, locale())" />
+    <x-hearth-label :for="$generateFieldId($name, locale())" :value="$generateLabelString($label, locale())" :required="$required" />
     <x-hearth-textarea :id="$generateFieldId($name, locale())" :name="$name . '[' . locale() . ']'" :value="old($generateErrorId($name, locale()), $model ? $model->getTranslation($name, locale()) : '')" />
     <x-hearth-error :for="$generateErrorId($name, locale())" />
 </div>
